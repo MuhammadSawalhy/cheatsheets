@@ -8,10 +8,11 @@ category: CLI
 ## Var assignment
 
 ```makefile
-uglify = $(uglify)        # lazy assignment
-compressor := $(uglify)   # immediate assignment
-prefix ?= /usr/local      # safe assignment
-hello += world            # append
+uglify = $(uglify)                # lazy assignment
+compressor := $(uglify)           # immediate assignment
+prefix ?= /usr/local              # safe assignment
+hello += world                    # append
+file_list != find . -name '*.c'   # value of a shell command
 ```
 
 `=` expressions are only evaluated when they're being used.
